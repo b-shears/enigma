@@ -1,5 +1,5 @@
-require './lib/enigma.rb'
-require './lib/key_generator.rb'
+require './lib/enigma'
+require './lib/key_generator'
 
 
 RSpec.describe KeyGenerator do
@@ -12,8 +12,8 @@ RSpec.describe KeyGenerator do
   end
 
   it 'generates random keys' do
-    expect(@new_key.random_key.length).to eq(5)
-    expect(@new_key.random_key.class).to eq(String)
+    expect(KeyGenerator.random_key.length).to eq(5)
+    expect(KeyGenerator.random_key.class).to eq(String)
   end
 
 
