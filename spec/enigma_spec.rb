@@ -1,5 +1,7 @@
 require 'date'
-require './lib/enigma.rb'
+require './lib/shifts'
+require '.key_generator'
+require './lib/enigma'
 
 
 RSpec.describe Enigma do
@@ -14,7 +16,7 @@ RSpec.describe Enigma do
   expect(@engima).to be_a(Enigma)
   end
 
-  it 'can encrypt a message with a key and date' do
+  xit 'can encrypt a message with a key and date' do
     expect(@enigma.encrypt("hello world", "02715", "040895")).to eq({
        encryption: "keder ohulw",
        key: "02715",
@@ -22,7 +24,7 @@ RSpec.describe Enigma do
       }))
   end
 
-  it 'can decrypt a message with a key and a date' do
+  xit 'can decrypt a message with a key and a date' do
     expect(@engima.decrypt("keder ohulw", "02715", "040895")).to eq({decryption: "hello world",
       key: "02715",
       date: "040895"
