@@ -1,4 +1,3 @@
-require 'date'
 
 class Shifts
   attr_reader :random_number, :date
@@ -14,9 +13,6 @@ class Shifts
       D: @random_number[3..4].to_i
     }
   end
-  # def todays_date
-  #    Date.today.strftime("%d%m%y")
-  # end
 
   def shift_offsets
     sq_date = @date.to_i ** 2
