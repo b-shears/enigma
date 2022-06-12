@@ -1,4 +1,6 @@
 require 'date'
+require './lib/key_generator'
+require './lib/shifts'
 
 class Enigma
   attr_reader :alphabet
@@ -8,6 +10,10 @@ class Enigma
 
   def todays_date
     Date.today.strftime("%d%m%y")
+  end
+
+  def encrpyt
+
   end
 
 end
