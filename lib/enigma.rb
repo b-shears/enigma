@@ -41,5 +41,32 @@ class Enigma
     end.join
   end
 
-
+  def decrypt(encrypted_message, key=nil, date=nil)
+    @encrypted_message = encrypted_message.downcase
+    # require "pry"; binding.pry
+    @key = key || KeyGenerator.random_number
+    @date = date || todays_date
+    @shifts = Shifts.new(@key, @date)
+    decrypted_message(@encrypted_message, @shifts)
+    derypt_output = {
+                  decryption: decrypted_message(@encrypted_message, @shifts),
+                  key: @key,
+                  date: @date
+                }
   end
+
+  def decrypted_message(encrypted_message, shifts)
+    encrypted_message.chars.each_with_index.map do |letter, index|
+      if @alphabet.index(letter).nil?
+         letter
+      else
+        pre_shift_index = index % 4
+        decryption_shift = -(shifts.shifts_sum.values[pre_shift_index])
+        unshifted_index = (decryption_shift + @alphabet.index(letter)) % 27
+        @alphabet[unshifted_index]
+      end
+    end.join
+  end
+
+
+end
