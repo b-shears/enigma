@@ -4,13 +4,9 @@ require './lib/shifts'
 require './lib/key_generator'
 require './lib/enigma'
 
-
 RSpec.describe Enigma do
   before :each do
     @enigma = Enigma.new
-    # @encrypted = @enigma.encrypt("hello world", "02715")
-    # @enigma.decrypt(encrypted[:encryption], "02715")
-    # @enigma.encrypt("hello world")
   end
 
   it 'exists' do
@@ -49,5 +45,4 @@ RSpec.describe Enigma do
       @encrypted_message = "keder ohulw!"
       expect(@enigma.decrypted_message(@encrypted_message, @shifts)).to eq("hello world!")
   end
-
 end
