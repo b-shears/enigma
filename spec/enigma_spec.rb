@@ -38,7 +38,7 @@ RSpec.describe Enigma do
   end
 
   it 'can decrypt a message with a key and a date' do
-    expect(@engima.decrypt("keder ohulw", "02715", "040895")).to eq({decryption: "hello world",
+    expect(@enigma.decrypt("keder ohulw", "02715", "040895")).to eq({decryption: "hello world",
       key: "02715",
       date: "040895"
       })
@@ -46,8 +46,8 @@ RSpec.describe Enigma do
 
   it 'can encrypt the message by shifting the letters' do
       @shifts = Shifts.new("02715", "040895")
-      @message = "keder ohulw!"
-      expect(@enigma.decrypted_message(@message, @shifts)).to eq("hello world!")
+      @encrypted_message = "keder ohulw!"
+      expect(@enigma.decrypted_message(@encrypted_message, @shifts)).to eq("hello world!")
   end
 
 end
