@@ -4,7 +4,7 @@ class KeyGenerator
   #   @argument = argument
   # end
 
-  def self.random_key
+  def self.random_number
     rand(5 ** 5).to_s.rjust(5, '0')
   end
 
