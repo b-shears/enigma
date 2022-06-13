@@ -4,10 +4,8 @@ require './lib/shifts'
 
 class Enigma
   attr_reader :alphabet
-
   def initialize
     @alphabet = ("a".."z").to_a << " "
-
   end
 
   def todays_date
@@ -16,20 +14,18 @@ class Enigma
 
   def encrypt(message, key=nil, date=nil)
     @message = message.downcase
-    # require "pry"; binding.pry
     @key = key || KeyGenerator.random_number
     @date = date || todays_date
     @shifts = Shifts.new(@key, @date)
-    encrypted_message(@message, @shifts)
-    enrypt_output = {
-                  encryption: encrypted_message(@message, @shifts),
-                  key: @key,
-                  date: @date
+    {
+      encryption: encrypted_message(@message, @shifts),
+      key: @key,
+      date: @date
                 }
   end
 
   def encrypted_message(message, shifts)
-    message.chars.each_with_index.map do |letter, index|
+    message.chars.map.with_index do |letter, index|
       if @alphabet.index(letter).nil?
          letter
       else
@@ -43,20 +39,18 @@ class Enigma
 
   def decrypt(encrypted_message, key=nil, date=nil)
     @encrypted_message = encrypted_message.downcase
-    # require "pry"; binding.pry
     @key = key || KeyGenerator.random_number
     @date = date || todays_date
     @shifts = Shifts.new(@key, @date)
-    decrypted_message(@encrypted_message, @shifts)
-    derypt_output = {
-                  decryption: decrypted_message(@encrypted_message, @shifts),
-                  key: @key,
-                  date: @date
-                }
+    {
+      decryption: decrypted_message(@encrypted_message, @shifts),
+      key: @key,
+      date: @date
+      }
   end
 
   def decrypted_message(encrypted_message, shifts)
-    encrypted_message.chars.each_with_index.map do |letter, index|
+    encrypted_message.chars.map.with_index do |letter, index|
       if @alphabet.index(letter).nil?
          letter
       else
@@ -67,6 +61,4 @@ class Enigma
       end
     end.join
   end
-
-
 end
