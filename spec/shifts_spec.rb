@@ -25,6 +25,4 @@ RSpec.describe Shifts do
       shift_result = {A: 3, B: 27, C: 73, D: 20}
     expect(@shifts.shifts_sum).to eq(shift_result)
   end
-
-
 end
