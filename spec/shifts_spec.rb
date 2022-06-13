@@ -4,6 +4,8 @@ require './lib/shifts'
 
 RSpec.describe Shifts do
   before :each do
+    @message = "hello world"
+    @date
     @shifts = Shifts.new("02715", "040895")
   end
 
@@ -23,4 +25,6 @@ RSpec.describe Shifts do
       shift_result = {A: 3, B: 27, C: 73, D: 20}
     expect(@shifts.shifts_sum).to eq(shift_result)
   end
+
+
 end
