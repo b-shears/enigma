@@ -1,6 +1,6 @@
+require 'spec_helper'
 require './lib/enigma'
 require './lib/key_generator'
-
 
 RSpec.describe KeyGenerator do
   before :each do
@@ -15,6 +15,4 @@ RSpec.describe KeyGenerator do
     expect(KeyGenerator.random_key.length).to eq(5)
     expect(KeyGenerator.random_key.class).to eq(String)
   end
-
-
 end
