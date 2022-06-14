@@ -26,7 +26,7 @@ class Enigma
       else
         pre_shift_index = index % 4
         encryption_shift = shifts.shifts_sum.values[pre_shift_index]
-        shifted_index = (encryption_shift + ALPHABET.index(letter)) % 27
+        shifted_index = (encryption_shift + ALPHABET.index(letter)) % ALPHABET.count
         ALPHABET[shifted_index]
       end
     end.join

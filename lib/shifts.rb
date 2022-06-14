@@ -1,4 +1,3 @@
-
 class Shifts
   attr_reader :random_number, :date
   def initialize(random_number, date)
@@ -26,5 +25,4 @@ class Shifts
   def shifts_sum
     shift_keys.merge!(shift_offsets) {|key, shift_key_value, offset_value| shift_key_value + offset_value}
   end
-
 end

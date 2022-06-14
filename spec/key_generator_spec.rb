@@ -12,7 +12,7 @@ RSpec.describe KeyGenerator do
   end
 
   it 'generates random keys' do
-    expect(KeyGenerator.random_key.length).to eq(5)
-    expect(KeyGenerator.random_key.class).to eq(String)
+    expect(KeyGenerator.random_number.length).to eq(5)
+    expect(KeyGenerator.random_number.class).to eq(String)
   end
 end

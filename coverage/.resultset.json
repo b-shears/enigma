@@ -3,33 +3,32 @@
     "coverage": {
       "/Users/bryan/turing/1Module/projects/enigma/lib/shifts.rb": {
         "lines": [
-          null,
           1,
           1,
           1,
-          4,
-          4,
+          8,
+          8,
           null,
           null,
           1,
-          44,
+          46,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          44,
-          44,
-          44,
           null,
           null,
           null,
           null,
           null,
           1,
-          220,
+          46,
+          46,
+          46,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          225,
           null,
           null,
           null
@@ -38,9 +37,8 @@
       "/Users/bryan/turing/1Module/projects/enigma/lib/key_generator.rb": {
         "lines": [
           1,
-          null,
           1,
-          0,
+          2,
           null,
           null
         ]
@@ -105,8 +103,62 @@
           null,
           null
         ]
+      },
+      "/Users/bryan/turing/1Module/projects/enigma/spec/key_generator_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/bryan/turing/1Module/projects/enigma/spec/shifts_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          4,
+          null,
+          4,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1655167718
+    "timestamp": 1655243658
   }
 }
