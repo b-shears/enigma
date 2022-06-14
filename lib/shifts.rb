@@ -15,8 +15,8 @@ class Shifts
   end
 
   def shift_offsets
-    sq_date = @date.to_i ** 2
-    last_four = sq_date.to_s[-4..-1]
+    square_date = @date.to_i ** 2
+    last_four = square_date.to_s[-4..-1]
     offset = {A: last_four[0].to_i,
       B: last_four[1].to_i,
       C: last_four[2].to_i,
